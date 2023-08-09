@@ -1,0 +1,26 @@
+[
+  {
+    "color": "brown",
+    "type": "cat",
+    "size": "nano",
+    "name": "Bear"
+  },
+  {
+    "color": "black",
+    "type": "cat",
+    "size": "nano",
+    "name": "Bailey"
+  },
+  {
+    "color": "green",
+    "type": "snake",
+    "size": "nano",
+    "name": "Snek"
+  },
+  {
+    "color": "white",
+    "type": "fox",
+    "size": "nano",
+    "name": "Adolf"
+  }
+]

@@ -1,0 +1,38 @@
+footer {
+	width: 100%;
+	height: auto;
+	background-color: $grey;
+	color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-content {
+	margin-left: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.footer-content img {
+	height: 27px;
+	-webkit-filter: invert(100%); /* Safari/Chrome */
+	filter: invert(100%);
+}
+
+.footer-content ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.footer-content ul li {
+	font-size: 16px;
+}
+
+.footer-content ul li i {
+	margin-right: 10px;
+}
+
+.fa-handshake {
+	transform: rotate(-45deg);
+}
