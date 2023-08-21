@@ -16,6 +16,7 @@
 	margin-top: -40px;
 
 	.restaurant-title {
+		position: relative;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -28,10 +29,34 @@
 			padding-left: 15px;
 		}
 
-		i {
-			padding-right: 30px;
-			padding-top: 30px;
+		.like-button {
+			right: 60px;
+			top: 30px;
 			font-size: 30px;
+			position: absolute;
+
+			.like-button-empty {
+				opacity: 1;
+				position: absolute;
+			}
+	
+			.like-button-full {
+				position: absolute;
+				opacity: 0;
+				background: linear-gradient(#ff79da, #9356dc);
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+				transition: all 400ms;
+
+				&:hover {
+					opacity: 1;
+				}
+
+				&:hover .like-button-empty {
+					opacity: 0;
+				}
+			}
 		}
 	}
 }
@@ -115,4 +140,10 @@
 	border: none;
 	background: linear-gradient(175deg, #9356dc 0%, #ff79da 100%);
 	color: white;
+}
+
+@media (min-width: 800px) {
+	.part-choice {
+
+	}
 }

@@ -6,12 +6,13 @@ header {
   flex-direction: column;
   align-items: center;
 }
-
 header .logo {
   background-color: #FFF;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  text-align: center;
 }
-
-.logo img {
+header .logo img {
   width: 200px;
   padding-bottom: 10px;
 }
@@ -101,6 +102,7 @@ footer {
   margin-top: -40px;
 }
 .menu-card .restaurant-title {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -112,10 +114,30 @@ footer {
   font-family: Shrikhand;
   padding-left: 15px;
 }
-.menu-card .restaurant-title i {
-  padding-right: 30px;
-  padding-top: 30px;
+.menu-card .restaurant-title .like-button {
+  right: 60px;
+  top: 30px;
   font-size: 30px;
+  position: absolute;
+}
+.menu-card .restaurant-title .like-button .like-button-empty {
+  opacity: 1;
+  position: absolute;
+}
+.menu-card .restaurant-title .like-button .like-button-full {
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: all 400ms;
+}
+.menu-card .restaurant-title .like-button .like-button-full:hover {
+  opacity: 1;
+}
+.menu-card .restaurant-title .like-button .like-button-full:hover .like-button-empty {
+  opacity: 0;
 }
 
 .menu-part {
@@ -343,6 +365,11 @@ main {
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 2px;
+}
+
+button:hover {
+  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(175deg, #a16be0 0%, #ff93e1 100%);
 }
 
 html {
