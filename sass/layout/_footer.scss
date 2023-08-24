@@ -35,3 +35,31 @@ footer {
 .fa-handshake {
 	transform: rotate(-45deg);
 }
+
+.partner {
+	margin-left: -6px;
+}
+
+@media (min-width: 769px) {
+
+	.footer-content {
+		display: flex;
+		flex-direction: row-reverse;
+		margin-right: 5%;
+		margin-top: 80px;
+		margin-left: 30%;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+			margin-right: 20px;
+
+			li {
+				font-size: 16px;
+				font-weight: 500;
+				margin-right: 20px;
+			}
+		}
+	}
+
+}

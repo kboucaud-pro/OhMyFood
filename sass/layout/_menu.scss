@@ -39,7 +39,7 @@
 				opacity: 1;
 				position: absolute;
 			}
-	
+
 			.like-button-full {
 				position: absolute;
 				opacity: 0;
@@ -142,8 +142,39 @@
 	color: white;
 }
 
-@media (min-width: 800px) {
-	.part-choice {
+@media (min-width: 769px) {
+	.restaurant-main {
 
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.menu-card {
+			width: 70%;
+
+			.restaurant-title {
+					justify-content: center;
+			}
+
+			.like-button {
+				right: 33%;
+			}
+		}
+	}
+
+	.menu-part {
+		margin-top: 20px;
+
+		h3 {
+			margin-left: 20%;
+			margin-bottom: 0;
+		}
+
+		.menu-choices {
+
+			.part-choice {
+				width: 60%;
+			}
+		}
 	}
 }
