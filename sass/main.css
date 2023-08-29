@@ -180,6 +180,49 @@ footer {
   border: none;
 }
 
+.price-and-selected {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  right: 0;
+  right: -26%;
+  top: 0;
+  width: 40%;
+  transition: transform 300ms ease-in-out;
+  background-color: #fff;
+}
+.price-and-selected .part-price {
+  margin-right: 20px;
+  padding-top: 40px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.price-and-selected .choice-selected {
+  background-color: #99E2D0;
+  width: 50%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-right: 0;
+}
+.price-and-selected .choice-selected i {
+  display: none;
+  font-size: 25px;
+  margin-top: 30%;
+  margin-left: 30%;
+  color: white;
+}
+
+.choice-checkbox {
+  display: none;
+}
+.choice-checkbox:checked + .price-and-selected {
+  transform: translateX(-65px);
+}
+.choice-checkbox:checked + .price-and-selected .choice-selected i {
+  display: block;
+}
+
 .menu-choices {
   display: flex;
   flex-direction: column;
@@ -196,6 +239,9 @@ footer {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  height: 100%;
 }
 .part-choice h4 {
   margin-left: 10px;
@@ -211,13 +257,8 @@ footer {
   margin-bottom: 10px;
   font-size: 15px;
   font-weight: 300;
-}
-.part-choice .part-price {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  font-size: 15px;
-  font-weight: 700;
+  width: auto;
+  text-overflow: ellipsis;
 }
 
 .order-validation {
