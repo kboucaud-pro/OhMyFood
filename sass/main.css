@@ -524,6 +524,54 @@ body {
   position: relative;
 }
 
+#loader-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #d7d7d7;
+  animation: loader-kf 2000ms;
+  animation-fill-mode: forwards;
+}
+
+#loader-bar {
+  z-index: 9999;
+  position: absolute;
+  top: 150px;
+  left: 20%;
+  width: 60%;
+  height: 30px;
+  background: linear-gradient(90deg, #9356dc 0%, #ff79da 100%);
+  border-radius: 25px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: loader-bar-kf 2000ms;
+}
+
+@keyframes loader-kf {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loader-bar-kf {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
 @media (min-width: 769px) {
   body {
     width: 100%;
