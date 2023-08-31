@@ -14,6 +14,7 @@
 	height: 100%;
 	position: relative;
 	margin-top: -40px;
+	overflow: hidden;
 
 	.restaurant-title {
 		position: relative;
@@ -56,55 +57,6 @@
 	}
 }
 
-.price-and-selected {
-	position: absolute;
-	display: flex;
-	flex-direction: row;
-	height: 100%;
-	right: 0;
-	right: -26%;
-	top: 0;
-	width: 40%;
-	transition: transform 300ms ease-in-out;
-	background-color: #fff;
-
-	.part-price {
-		margin-right: 20px;
-		padding-top: 40px;
-		font-size: 16px;
-		font-weight: 700;
-	}
-
-	.choice-selected {
-		background-color: #99E2D0;
-		width: 50%;
-		border-top-right-radius: 15px;
-		border-bottom-right-radius: 15px;
-		margin-right: 0;
-	
-		i {
-			display: none;
-			font-size: 25px;
-			margin-top: 30%;
-			margin-left: 30%;
-			color: white;
-		}
-	}
-}
-
-.choice-checkbox {
-	display: none;
-
-	&:checked + .price-and-selected {
-
-		transform: translateX(-65px);
-
-		.choice-selected i {
-			display: block;
-		}
-	}
-}
-
 .menu-choices {
 	display: flex;
 	flex-direction: column;
@@ -119,49 +71,104 @@
 	margin-top: 10px;
 	width: 340px;
 	display: flex;
-	flex-direction: column;
-	position: relative;
+	flex-direction: row;
+	flex-wrap: nowrap;
 	overflow-x: hidden;
 	text-overflow: ellipsis;
 	height: 100%;
 
-	h4 {
-		margin-left: 10px;
-		margin-top: 10px;
-		margin-bottom: auto;
-		font-weight: 500;
-		font-size: 18px;
-		color: black;
+	label {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+
+		.choice-text {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: auto;
+			max-width: 90%;
+			justify-content: space-around;
+			padding-left: 5%;
+
+			h4 {
+				margin-bottom: 5px;
+				margin-left: 0;
+				margin-right: 0;
+				margin-top: 10px;
+				font-weight: 500;
+				font-size: 18px;
+				width: auto;
+				color: black;
+				text-overflow: ellipsis;
+			}
+
+			.trimming {
+				width: auto;
+				margin-bottom: 10px;
+				font-size: 15px;
+				font-weight: 300;
+				text-overflow: ellipsis;
+			}
+		}
+
+		.price-and-selected {
+			height: 100%;
+			width: 40%;
+			display: flex;
+			flex-direction: row;
+			transition: transform 300ms ease-in-out;
+			transform: translateX(50%);
+			padding: 0;
+			margin: 0;
+
+			.part-price {
+				display: flex;
+				width: 50%;
+				height: 90%;
+				flex-direction: column;
+				justify-content: flex-end;
+				position: relative;
+				text-align: center;
+			}
+	
+			.choice-selected {
+				background-color: #99e2d0;
+				border-top-right-radius: 15px;
+				border-bottom-right-radius: 15px;
+				transition: transform 300ms ease-in-out;
+				width: 50%;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+		
+				i {
+					text-align: center;
+					font-size: 25px;
+					color: white;
+				}
+			}
+		}
+
 	}
 
-	.trimming {
-		margin-top: 4px;
-		margin-left: 10px;
-		margin-bottom: 10px;
-		font-size: 15px;
-		font-weight: 300;
-		width: auto;
-		max-width: 80%;
-		text-overflow: ellipsis;
+	.choice-checkbox {
+		display: none;
+
+		&:checked + .price-and-selected{
+			transform: translateX(0%);
+		}
 	}
 }
 
-.show-1 {
-	transform: translateX(400px);
-	animation: show-display 800ms;
-	animation-fill-mode: forwards;
-}
-
-.show-2 {
-	transform: translateX(400px);
-	animation: show-display 800ms 500ms;
-	animation-fill-mode: forwards;
-}
-
-.show-3 {
-	transform: translateX(400px);
-	animation: show-display 800ms 1000ms;
-	animation-fill-mode: forwards;
+@for $i from 1 through 3 {
+	.show-#{$i} {
+		animation: show-display 800ms ($i - 1) * 500ms;
+		transform: translateX(2000px);
+		animation-fill-mode: forwards;
+	}
 }
 
 @keyframes show-display {
@@ -230,13 +237,6 @@
 	}
 
 	.price-and-selected {
-		right: -33%;
-
-		.choice-selected {
-			i {
-				margin-top: 18%;
-				margin-left: 15%;
-			}
-		}		
+		width: 20%;
 	}
 }
