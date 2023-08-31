@@ -130,12 +130,12 @@ main {
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-left: 10%;
-}
 
-.restaurant-card-heart {
-	float: right;
-	margin-right: 7%;
-	margin-top: 5%;
+	.like-button {
+		float: right;
+		margin-right: 15%;
+		margin-top: 2%;
+	}
 }
 
 .restaurant-title {
@@ -191,7 +191,6 @@ main {
 	}
 
 	.restaurants {
-
 		h2 {
 			margin-left: 5%;
 		}
@@ -204,8 +203,11 @@ main {
 
 			.restaurant-card {
 				width: 40%;
+
+				.like-button {
+					margin-right: 10%;
+				}
 			}
 		}
-	
 	}
 }

@@ -2,3 +2,30 @@ button:hover {
 	box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.2);
 	background: linear-gradient(175deg, lighten(#9356dc, 5%) 0%, lighten(#ff79da, 5%) 100%);
 }
+
+.like-button {
+	font-size: 30px;
+
+	.like-button-empty {
+		opacity: 1;
+		position: absolute;
+	}
+
+	.like-button-full {
+		position: absolute;
+		opacity: 0;
+		background: linear-gradient(#ff79da, #9356dc);
+		background-clip: text;
+		-webkit-background-clip: text;
+		color: transparent;
+		transition: all 400ms;
+
+		&:hover {
+			opacity: 1;
+		}
+
+		&:hover .like-button-empty {
+			opacity: 0;
+		}
+	}
+}
