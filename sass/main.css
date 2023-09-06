@@ -169,31 +169,23 @@ footer {
 }
 
 .part-choice {
+  height: 80px;
+  width: 340px;
+  display: flex;
+  overflow: hidden;
   border-radius: 15px;
   background-color: #fff;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin-top: 10px;
-  width: 340px;
-  overflow-x: hidden;
-  height: 100%;
 }
-.part-choice label {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.part-choice label .choice-text {
+.part-choice .choice-text {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 100%;
-  justify-content: space-around;
-  padding-left: 5%;
-  text-overflow: ellipsis;
+  flex: 1 1 100%;
+  overflow: hidden;
+  padding: 0.5rem;
 }
-.part-choice label .choice-text h4 {
+.part-choice .choice-text h4 {
   margin-bottom: 5px;
   margin-left: 0;
   margin-right: 0;
@@ -205,7 +197,7 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.part-choice label .choice-text .trimming {
+.part-choice .choice-text .trimming {
   margin-bottom: 10px;
   font-size: 15px;
   font-weight: 100;
@@ -213,43 +205,38 @@ footer {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.part-choice label .price-and-selected {
-  display: flex;
-  flex-direction: row;
-  width: 175px;
-  transition: transform 300ms ease-in-out;
-  transform: translateX(50%);
-}
-.part-choice label .price-and-selected .part-price {
+.part-choice .part-price {
   display: flex;
   height: 90%;
-  width: 50%;
+  width: 10%;
+  padding-right: 5px;
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
   text-align: center;
 }
-.part-choice label .price-and-selected .choice-selected {
+.part-choice .choice-selected {
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
   height: 100%;
-  width: 50%;
+  width: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.part-choice label .price-and-selected .choice-selected i {
+.part-choice .choice-selected i {
   text-align: center;
   font-size: 25px;
   color: white;
 }
-.part-choice .choice-checkbox {
+
+.choice-checkbox {
   display: none;
 }
-.part-choice .choice-checkbox:checked + .price-and-selected {
-  transform: translateX(0%);
+.choice-checkbox:checked + .choice-selected {
+  width: 20%;
 }
 
 .show-1 {
