@@ -182,6 +182,7 @@ footer {
 }
 .part-choice .choice-text {
   display: flex;
+  height: 100%;
   flex-direction: column;
   flex: 1 1 100%;
   overflow: hidden;
