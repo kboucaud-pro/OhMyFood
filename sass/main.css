@@ -153,11 +153,13 @@ footer {
   font-weight: 300;
   margin-left: 5%;
 }
-.menu-part h3 hr {
+.menu-part hr {
   background-color: #99e2d0;
   height: 3px;
   width: 40px;
-  margin: 0;
+  margin-left: 5%;
+  margin-bottom: 0;
+  margin-top: -15px;
   border: none;
 }
 
@@ -185,7 +187,7 @@ footer {
   overflow: hidden;
   padding: 0.5rem;
 }
-.part-choice .choice-text h4 {
+.part-choice .choice-text .dish {
   margin-bottom: 5px;
   margin-left: 0;
   margin-right: 0;
@@ -307,6 +309,10 @@ footer {
   .menu-part h3 {
     margin-left: 20%;
     margin-bottom: 0;
+  }
+  .menu-part hr {
+    margin-left: 20%;
+    margin-top: 0;
   }
   .menu-part .menu-choices .part-choice {
     width: 60%;
