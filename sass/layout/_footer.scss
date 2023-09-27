@@ -26,6 +26,11 @@ footer {
 
 .footer-content ul li {
 	font-size: 16px;
+
+	a {
+		text-decoration: none;
+		color: white;
+	}
 }
 
 .footer-content ul li i {
@@ -58,6 +63,11 @@ footer {
 				font-size: 16px;
 				font-weight: 500;
 				margin-right: 20px;
+
+				a {
+					text-decoration: none;
+					color: white;
+				}
 			}
 		}
 	}
